@@ -35,12 +35,12 @@ class MainMenuState extends MusicBeatState
 	
 	var optionShit:Array<String> = [
 		//'story_mode',
-		'freeplay',
-		#if MODS_ALLOWED 'mods', #end
+		'freeplay',//1
+		#if MODS_ALLOWED 'mods', #end//2
 		//#if ACHIEVEMENTS_ALLOWED 'awards', #end
 		//'credits',
-		//#if !switch 'donate', #end
-		'options'
+		#if !switch 'donate', #end//3
+		'options'//4
 	];
 
 	var magenta:FlxSprite;
@@ -81,14 +81,25 @@ class MainMenuState extends MusicBeatState
 		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('all/images/back_menu'));
 		bg.scrollFactor.set(0, yScroll);
 		bg.setGraphicSize(Std.int(bg.width * 1.175));
-  bg.frames = Paths.getSparrowAtlas('all/images/back_menu', 'backmenu');
-		bg.animation.addByPrefix('idle','hi',24,true);
-		bg.animation.play('idle');
+		bg.animation.addByPrefix('picoidle','hi',24,true);
+		bg.animation.play('picoidle');
 		bg.active = true;
 		bg.updateHitbox();
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
+
+		var bg2:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('all/images/back'));
+		bg2.scrollFactor.set(0, yScroll);
+		bg2.setGraphicSize(Std.int(bg.width * 1.175));
+		bg2.frames = Paths.getSparrowAtlas('all/images/back');
+		bg2.animation.addByPrefix('menuidle','hi',24,true);
+		bg2.animation.play('menuidle');
+		bg2.active = true;
+		bg2.updateHitbox();
+		bg2.screenCenter();
+		bg2.antialiasing = ClientPrefs.globalAntialiasing;
+		add(bg2);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		camFollowPos = new FlxObject(0, 0, 1, 1);
@@ -139,13 +150,25 @@ class MainMenuState extends MusicBeatState
             switch(i)
 			    {
                     case 0:
-					    menuItem.y = 100;
-					    menuItem.x = 490;
+					    menuItem.y = 0;
+					    menuItem.x = 450;
 
                     
                     case 1:
-						menuItem.y = 510;
-						menuItem.x = 490;
+						menuItem.y = 150;
+						menuItem.x = 450;
+
+					case 2:
+						menuItem.y = 300;
+						menuItem.x = 450;
+						
+					case 3:
+						menuItem.y = 450;
+						menuItem.x = 450;
+					
+					case 4:
+						menuItem.y = 600;
+						menuItem.x = 450;	
 				}
 
 
