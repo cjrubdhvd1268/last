@@ -85,15 +85,15 @@ class PlayState extends MusicBeatState
 
 	public static var ratingStuff:Array<Dynamic> = [
 		['You idoit!', 0.2], //From 0% to 19%
-		['Like Shit', 0.4], //From 20% to 39%
-		['Very bad', 0.5], //From 40% to 49%
-		['Come bro', 0.6], //From 50% to 59%
-		['false', 0.69], //From 60% to 68%
-		['C', 0.7], //69%
-		['B', 0.8], //From 70% to 79%
-		['A', 0.9], //From 80% to 89%
-		['S', 1], //From 90% to 99%
-		['AP', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['Shit', 0.4], //From 20% to 39%
+		['Bad', 0.5], //From 40% to 49%
+		['Bruh', 0.6], //From 50% to 59%
+		['damn it', 0.69], //From 60% to 68%
+		['emmmm', 0.7], //69%
+		['a little bad bro', 0.8], //From 70% to 79%
+		['Good', 0.9], //From 80% to 89%
+		['Good job!', 1], //From 90% to 99%
+		['Go Pico!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 
 	//event variables
@@ -456,11 +456,11 @@ class PlayState extends MusicBeatState
 				case 'ugh' | 'guns' | 'stress':
 					curStage = 'tank';
 				case 'vanquished':
-				    curStage = 'corrupt';
+					curStage = 'corrupt';
 				case 'warzone':
 					curStage = 'warzone';
 				case 'removal':
-					curStage = 'bfrs';	
+					curStage = 'bfrs';		
 				default:
 					curStage = 'stage';
 			}
@@ -673,18 +673,6 @@ class PlayState extends MusicBeatState
 				santa = new BGSprite('christmas/santa', -840, 150, 1, 1, ['santa idle in fear']);
 				add(santa);
 				precacheList.set('Lights_Shut_off', 'sound');
-
-
-
-            case 'corrupt':
-				var sky:BGSprite = new BGSprite('Corruption/sky',-1100,-260,1.8,1.8);
-				sky.scrollFactor.set(0.9,0.9);
-				sky.scale.set(1.8,1.8);
-				add(sky);
-				sky.alpha = 0.7;
-
-
-
 
 			case 'mallEvil': //Week 5 - Winter Horrorland
 				var bg:BGSprite = new BGSprite('christmas/evilBG', -400, -500, 0.2, 0.2);
@@ -1035,7 +1023,7 @@ class PlayState extends MusicBeatState
 
 		var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
 		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 248, 19, 400, "", 32);
-		timeTxt.setFormat(Paths.font("vc.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		timeTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		timeTxt.scrollFactor.set();
 		timeTxt.alpha = 0;
 		timeTxt.borderSize = 2;
@@ -1188,14 +1176,14 @@ class PlayState extends MusicBeatState
 		reloadHealthBarColors();
 
 		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
-		scoreTxt.setFormat(Paths.font("vc.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
-		botplayTxt.setFormat(Paths.font("vc.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
