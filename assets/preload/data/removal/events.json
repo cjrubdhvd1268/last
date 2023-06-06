@@ -1,0 +1,169 @@
+{
+	"song": {
+		"speed": 2.7,
+		"stage": "bfrs",
+		"player1": "pico-bfrs",
+		"player2": "bf-bfrs",
+		"player3": null,
+		"events": [
+			[
+				13028.5714285714,
+				[
+					[
+						"Start Shooting",
+						"bf",
+						"-alt"
+					]
+				]
+			],
+			[
+				16542.8571428571,
+				[
+					[
+						"End Shooting",
+						"bf",
+						"-alt"
+					]
+				]
+			],
+			[
+				22114.2857142857,
+				[
+					[
+						"Start Shooting",
+						"bf",
+						"-alt"
+					]
+				]
+			],
+			[
+				29657.1428571429,
+				[
+					[
+						"End Shooting",
+						"bf",
+						"-alt"
+					]
+				]
+			],
+			[
+				33000,
+				[
+					[
+						"Start Shooting",
+						"bf",
+						"-alt"
+					]
+				]
+			],
+			[
+				33085.7142857143,
+				[
+					[
+						"Blammed Lights",
+						"true",
+						"-alt"
+					]
+				]
+			],
+			[
+				39085.7142857143,
+				[
+					[
+						"End Shooting",
+						"bf",
+						"-alt"
+					]
+				]
+			],
+			[
+				54685.7142857143,
+				[
+					[
+						"Blammed Lights",
+						"false",
+						"-alt"
+					]
+				]
+			],
+			[
+				55028.5714285714,
+				[
+					[
+						"Start Shooting",
+						"bf",
+						"-alt"
+					]
+				]
+			],
+			[
+				60514.2857142857,
+				[
+					[
+						"End Shooting",
+						"bf",
+						"-alt"
+					]
+				]
+			],
+			[
+				76885.7142857143,
+				[
+					[
+						"Start Shooting",
+						"bf",
+						"-alt"
+					]
+				]
+			],
+			[
+				76971.4285714285,
+				[
+					[
+						"Blammed Lights",
+						"true",
+						"-alt"
+					]
+				]
+			],
+			[
+				82285.7142857142,
+				[
+					[
+						"End Shooting",
+						"bf",
+						"-alt"
+					]
+				]
+			],
+			[
+				93428.5714285713,
+				[
+					[
+						"Start Shooting",
+						"bf",
+						"-alt"
+					]
+				]
+			],
+			[
+				98742.857142857,
+				[
+					[
+						"Blammed Lights",
+						"false",
+						"-alt"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 175,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "removal"
+	}
+}
