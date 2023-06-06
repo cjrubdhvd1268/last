@@ -81,10 +81,10 @@ class MainMenuState extends MusicBeatState
 		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('all/images/back_menu'));
 		bg.scrollFactor.set(0, yScroll);
 		bg.setGraphicSize(Std.int(bg.width * 1.175));
+  bg.frames = Paths.getSparrowAtlas('all/images/back_menu', 'backmenu');
 		bg.animation.addByPrefix('idle','hi',24,true);
 		bg.animation.play('idle');
 		bg.active = true;
-		bg.frames = Paths.getSparrowAtlas('all/back_menu', 'backmenu');
 		bg.updateHitbox();
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
