@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="menu.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="RPS basic0000" x="785" y="922" width="260" height="123"/>
+	<SubTexture name="RPS basic0001" x="785" y="922" width="260" height="123"/>
+	<SubTexture name="RPS basic0002" x="785" y="922" width="260" height="123"/>
+	<SubTexture name="RPS basic0003" x="1055" y="922" width="260" height="123"/>
+	<SubTexture name="RPS basic0004" x="1055" y="922" width="260" height="123"/>
+	<SubTexture name="RPS basic0005" x="1055" y="922" width="260" height="123"/>
+	<SubTexture name="RPS basic0006" x="284" y="943" width="260" height="123"/>
+	<SubTexture name="RPS basic0007" x="284" y="943" width="260" height="123"/>
+	<SubTexture name="RPS basic0008" x="284" y="943" width="260" height="123"/>
+	<SubTexture name="RPS white0000" x="0" y="918" width="274" height="133" frameX="-1" frameY="-4" frameWidth="278" frameHeight="139"/>
+	<SubTexture name="RPS white0001" x="497" y="797" width="278" height="136" frameX="0" frameY="-3" frameWidth="278" frameHeight="139"/>
+	<SubTexture name="RPS white0002" x="1737" y="522" width="276" height="139" frameX="-1" frameY="0" frameWidth="278" frameHeight="139"/>
+	<SubTexture name="credits basic0000" x="1253" y="522" width="474" height="126"/>
+	<SubTexture name="credits basic0001" x="1253" y="522" width="474" height="126"/>
+	<SubTexture name="credits basic0002" x="1253" y="522" width="474" height="126"/>
+	<SubTexture name="credits basic0003" x="637" y="529" width="474" height="126"/>
+	<SubTexture name="credits basic0004" x="637" y="529" width="474" height="126"/>
+	<SubTexture name="credits basic0005" x="637" y="529" width="474" height="126"/>
+	<SubTexture name="credits basic0006" x="0" y="541" width="474" height="126"/>
+	<SubTexture name="credits basic0007" x="0" y="541" width="474" height="126"/>
+	<SubTexture name="credits basic0008" x="0" y="541" width="474" height="126"/>
+	<SubTexture name="credits white0000" x="0" y="0" width="650" height="172" frameX="0" frameY="0" frameWidth="652" frameHeight="172"/>
+	<SubTexture name="credits white0001" x="1321" y="0" width="643" height="171" frameX="0" frameY="0" frameWidth="652" frameHeight="172"/>
+	<SubTexture name="credits white0002" x="660" y="0" width="651" height="171" frameX="-1" frameY="0" frameWidth="652" frameHeight="172"/>
+	<SubTexture name="freeplay basic0000" x="1121" y="658" width="484" height="122"/>
+	<SubTexture name="freeplay basic0001" x="1121" y="658" width="484" height="122"/>
+	<SubTexture name="freeplay basic0002" x="1121" y="658" width="484" height="122"/>
+	<SubTexture name="freeplay basic0003" x="484" y="665" width="484" height="122"/>
+	<SubTexture name="freeplay basic0004" x="484" y="665" width="484" height="122"/>
+	<SubTexture name="freeplay basic0005" x="484" y="665" width="484" height="122"/>
+	<SubTexture name="freeplay basic0006" x="978" y="790" width="484" height="122"/>
+	<SubTexture name="freeplay basic0007" x="978" y="790" width="484" height="122"/>
+	<SubTexture name="freeplay basic0008" x="978" y="790" width="484" height="122"/>
+	<SubTexture name="freeplay white0000" x="0" y="362" width="627" height="169" frameX="0" frameY="0" frameWidth="635" frameHeight="174"/>
+	<SubTexture name="freeplay white0001" x="0" y="182" width="632" height="170" frameX="-3" frameY="-1" frameWidth="635" frameHeight="174"/>
+	<SubTexture name="freeplay white0002" x="660" y="181" width="629" height="173" frameX="-4" frameY="-1" frameWidth="635" frameHeight="174"/>
+	<SubTexture name="options basic0000" x="1472" y="790" width="487" height="111"/>
+	<SubTexture name="options basic0001" x="1472" y="790" width="487" height="111"/>
+	<SubTexture name="options basic0002" x="1472" y="790" width="487" height="111"/>
+	<SubTexture name="options basic0003" x="1472" y="911" width="487" height="111"/>
+	<SubTexture name="options basic0004" x="1472" y="911" width="487" height="111"/>
+	<SubTexture name="options basic0005" x="1472" y="911" width="487" height="111"/>
+	<SubTexture name="options basic0006" x="0" y="797" width="487" height="111"/>
+	<SubTexture name="options basic0007" x="0" y="797" width="487" height="111"/>
+	<SubTexture name="options basic0008" x="0" y="797" width="487" height="111"/>
+	<SubTexture name="options white0000" x="637" y="364" width="606" height="155" frameX="-2" frameY="-1" frameWidth="610" frameHeight="163"/>
+	<SubTexture name="options white0001" x="1299" y="354" width="607" height="158" frameX="-3" frameY="-1" frameWidth="610" frameHeight="163"/>
+	<SubTexture name="options white0002" x="1299" y="181" width="610" height="163"/>
+</TextureAtlas>
