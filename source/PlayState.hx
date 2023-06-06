@@ -459,7 +459,7 @@ class PlayState extends MusicBeatState
 				    curStage = 'corrupt';
 				case 'warzone':
 					curStage = 'warzone';
-				case 'removal'
+				case 'removal':
 					curStage = 'bfrs';	
 				default:
 					curStage = 'stage';
