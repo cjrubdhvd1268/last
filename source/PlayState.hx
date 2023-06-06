@@ -73,7 +73,7 @@ import sys.io.File;
 #end
 
 #if VIDEOS_ALLOWED
-import VideoHandler as MP4Handler;
+import vlc.MP4Handler;
 #end
 
 using StringTools;
@@ -84,16 +84,16 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
 	public static var ratingStuff:Array<Dynamic> = [
-		['You Suck!', 0.2], //From 0% to 19%
-		['Shit', 0.4], //From 20% to 39%
-		['Bad', 0.5], //From 40% to 49%
-		['Bruh', 0.6], //From 50% to 59%
-		['Meh', 0.69], //From 60% to 68%
-		['Nice', 0.7], //69%
-		['Good', 0.8], //From 70% to 79%
-		['Great', 0.9], //From 80% to 89%
-		['Sick!', 1], //From 90% to 99%
-		['Perfect!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['You idoit!', 0.2], //From 0% to 19%
+		['Like Shit', 0.4], //From 20% to 39%
+		['Very bad', 0.5], //From 40% to 49%
+		['Come bro', 0.6], //From 50% to 59%
+		['false', 0.69], //From 60% to 68%
+		['C', 0.7], //69%
+		['B', 0.8], //From 70% to 79%
+		['A', 0.9], //From 80% to 89%
+		['S', 1], //From 90% to 99%
+		['AP', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 
 	//event variables
@@ -455,6 +455,12 @@ class PlayState extends MusicBeatState
 					curStage = 'schoolEvil';
 				case 'ugh' | 'guns' | 'stress':
 					curStage = 'tank';
+				case 'vanquished':
+				    curStage = 'corrupt';
+				case 'warzone':
+					curStage = 'warzone';
+				case 'removal'
+					curStage = 'bfrs';	
 				default:
 					curStage = 'stage';
 			}
@@ -667,6 +673,18 @@ class PlayState extends MusicBeatState
 				santa = new BGSprite('christmas/santa', -840, 150, 1, 1, ['santa idle in fear']);
 				add(santa);
 				precacheList.set('Lights_Shut_off', 'sound');
+
+
+
+            case 'corrupt':
+				var sky:BGSprite = new BGSprite('Corruption/sky',-1100,-260,1.8,1.8);
+				sky.scrollFactor.set(0.9,0.9);
+				sky.scale.set(1.8,1.8);
+				add(sky);
+				sky.alpha = 0.7;
+
+
+
 
 			case 'mallEvil': //Week 5 - Winter Horrorland
 				var bg:BGSprite = new BGSprite('christmas/evilBG', -400, -500, 0.2, 0.2);

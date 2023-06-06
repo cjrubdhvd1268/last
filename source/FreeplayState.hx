@@ -79,17 +79,16 @@ class FreeplayState extends MusicBeatState
 
 			WeekData.setDirectoryFromWeek(leWeek);
 
-			for (song in leWeek.songs)
-			{
-				var colors:Array<Int> = song[2];
-				if(colors == null || colors.length < 3)
-				{
-					colors = [146, 113, 253];
-				}
-				addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
-			}
-		}
-		WeekData.loadTheFirstEnabledMod();
+			//for (song in leWeek.songs)
+			//{
+				//var colors:Array<Int> = song[2];
+				//if(colors == null || colors.length < 3)
+				//{
+					//colors = [146, 113, 253];
+				//}
+				//g(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
+			////		}
+		//WeekData.loadTheFirstEnabledMod();
 
 		/*		//KIND OF BROKEN NOW AND ALSO PRETTY USELESS//
 
@@ -102,10 +101,27 @@ class FreeplayState extends MusicBeatState
 			}
 		}*/
 
-		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+		bg = new FlxSprite().loadGraphic(Paths.image('all/images/chessbg'));
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 		bg.screenCenter();
+
+		var bg2:FlxSprite;
+		bg2 = new FlxSprite().loadGraphic(Paths.image('all/images/chess'));
+		bg2.antialiasing = ClientPrefs.globalAntialiasing;
+		add(bg2);
+		bg2.screenCenter();
+
+		var bg3:FlxSprite;
+		bg3 = new FlxSprite().loadGraphic(Paths.image('all/images/backFreeplay'));
+		bg3.antialiasing = ClientPrefs.globalAntialiasing;
+		bg3.frames = Paths.getSparrowAtlas('all/images/backFreeplay');
+		bg3.animation.addByPrefix('backidle', 'hi', 24, true);
+		bg3.animation.play('backidle');
+		bg3.active = true;		
+		add(bg3);
+		bg3.screenCenter();
+
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
 		add(grpSongs);
@@ -134,12 +150,12 @@ class FreeplayState extends MusicBeatState
 
 			// songText.x += 40;
 			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
-			// songText.screenCenter(X);
+			songText.screenCenter(X);
 		}
 		WeekData.setDirectoryFromWeek();
 
 		scoreText = new FlxText(FlxG.width * 0.7, 5, 0, "", 32);
-		scoreText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
+		scoreText.setFormat(Paths.font("vc.ttf"), 32, FlxColor.WHITE, RIGHT);
 
 		scoreBG = new FlxSprite(scoreText.x - 6, 0).makeGraphic(1, 66, 0xFF000000);
 		scoreBG.alpha = 0.6;

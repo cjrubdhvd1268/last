@@ -53,6 +53,12 @@ class StageData {
 					stage = 'schoolEvil';
 				case 'ugh' | 'guns' | 'stress':
 					stage = 'tank';
+				case 'vanquished':
+					stage = 'corrupt';
+				case 'warzone':
+					stage = 'warzone';
+				case 'removal'
+					stage = 'bfrs';		
 				default:
 					stage = 'stage';
 			}
