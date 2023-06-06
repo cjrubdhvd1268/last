@@ -57,7 +57,7 @@ class StageData {
 					stage = 'corrupt';
 				case 'warzone':
 					stage = 'warzone';
-				case 'removal'
+				case 'removal':
 					stage = 'bfrs';		
 				default:
 					stage = 'stage';
