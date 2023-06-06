@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="backFreeplay.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="hi0000" x="0" y="0" width="1570" height="1380" frameX="0" frameY="0" frameWidth="1571" frameHeight="1380"/>
+	<SubTexture name="hi0001" x="0" y="0" width="1570" height="1380" frameX="0" frameY="0" frameWidth="1571" frameHeight="1380"/>
+	<SubTexture name="hi0002" x="0" y="0" width="1570" height="1380" frameX="0" frameY="0" frameWidth="1571" frameHeight="1380"/>
+	<SubTexture name="hi0003" x="1576" y="1390" width="1565" height="1380" frameX="0" frameY="0" frameWidth="1571" frameHeight="1380"/>
+	<SubTexture name="hi0004" x="1576" y="1390" width="1565" height="1380" frameX="0" frameY="0" frameWidth="1571" frameHeight="1380"/>
+	<SubTexture name="hi0005" x="1576" y="1390" width="1565" height="1380" frameX="0" frameY="0" frameWidth="1571" frameHeight="1380"/>
+	<SubTexture name="hi0006" x="0" y="1390" width="1566" height="1380" frameX="-5" frameY="0" frameWidth="1571" frameHeight="1380"/>
+	<SubTexture name="hi0007" x="0" y="1390" width="1566" height="1380" frameX="-5" frameY="0" frameWidth="1571" frameHeight="1380"/>
+	<SubTexture name="hi0008" x="0" y="1390" width="1566" height="1380" frameX="-5" frameY="0" frameWidth="1571" frameHeight="1380"/>
+</TextureAtlas>

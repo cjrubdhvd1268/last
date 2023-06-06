@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="RPSR_Hands.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Paper Blue0000" x="0" y="0" width="324" height="333"/>
+	<SubTexture name="Paper Dead0000" x="334" y="0" width="324" height="333"/>
+	<SubTexture name="Paper Green0000" x="668" y="0" width="324" height="333"/>
+	<SubTexture name="Rock Blue0000" x="353" y="619" width="253" height="253"/>
+	<SubTexture name="Rock Dead0000" x="616" y="619" width="253" height="253"/>
+	<SubTexture name="Rock Green0000" x="706" y="343" width="253" height="253"/>
+	<SubTexture name="Scissors Blue0000" x="0" y="343" width="343" height="266"/>
+	<SubTexture name="Scissors Dead0000" x="353" y="343" width="343" height="266"/>
+	<SubTexture name="Scissors Green0000" x="0" y="619" width="343" height="266"/>
+</TextureAtlas>
