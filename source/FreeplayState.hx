@@ -116,16 +116,16 @@ class FreeplayState extends MusicBeatState
 		add(bgback);
 		bgback.screenCenter();
 
-		bg2 = newFlxSprite().loadGraphic(Paths.image('all/images/chess'));
+		bg2 = new FlxSprite().loadGraphic(Paths.image('all/images/chess'));
 		bg2.antialiasing = ClientPrefs.globalAntialiasing;
         bg2.screenCenter();
 		add(bg2);
 
-        bg3 = newFlxSprite(-140,-325).loadGraphic(Paths.image('all/images/backFreeplay'));
+        bg3 = new FlxSprite(-140,-325).loadGraphic(Paths.image('all/images/backFreeplay'));
 		bg3.animation.addByPrefix('idleA','hi',24,true);
 		bg3.animation.play('idleA');
 		bg3.antialiasing = ClientPrefs.globalAntialiasing;
-        bg3.screenCenter(y);
+        bg3.screenCenter(Y);
 		add(bg3);
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
