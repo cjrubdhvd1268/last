@@ -47,8 +47,6 @@ class FreeplayState extends MusicBeatState
 	private var iconArray:Array<HealthIcon> = [];
 
 	var bg:FlxSprite;
-	var bg2:FlxSprite;
-	var bg3:FlxSprite;
 	var intendedColor:Int;
 	var colorTween:FlxTween;
 
@@ -104,26 +102,28 @@ class FreeplayState extends MusicBeatState
 			}
 		}*/
 
-		
-
-		bg = new FlxSprite().loadGraphic(Paths.image('all/images/chessbg'));
+		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
+		bg.alpha = 0.000001;
 		add(bg);
 		bg.screenCenter();
 
-		bg2 = new FlxSprite().loadGraphic(Paths.image('all/images/chess'));
+		bgback = new FlxSprite().loadGraphic(Paths.image('all/images/chessbg'));
+		bgback.antialiasing = ClientPrefs.globalAntialiasing;
+		add(bgback);
+		bgback.screenCenter();
+
+		bg2 = newFlxSprite().loadGraphic(Paths.image('all/images/chess'))
 		bg2.antialiasing = ClientPrefs.globalAntialiasing;
+        bg2.screenCenter();
 		add(bg2);
-		bg2.screenCenter();
-		
-		bg3 = new FlxSprite().loadGraphic(Paths.image('all/images/backFreeplay'));
+
+        bg3 = newFlxSprite(-140,-325).loadGraphic(Paths.image('all/images/backFreeplay'))
+		bg3.animation.addByPrefix('idleA','hi',24,true)
+		bg3.animation.play('idleA')
 		bg3.antialiasing = ClientPrefs.globalAntialiasing;
-		bg3.frames = Paths.getSparrowAtlas('all/images/backFreeplay');
-		bg3.animation.addByPrefix('backidle', 'hi', 24, true);
-		bg3.animation.play('backidle');
-		bg3.active = true;		
+        bg3.screenCenter(y);
 		add(bg3);
-		bg3.screenCenter();
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
 		add(grpSongs);
@@ -152,12 +152,12 @@ class FreeplayState extends MusicBeatState
 
 			// songText.x += 40;
 			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
-			// songText.screenCenter(X);
+			 songText.screenCenter(X);
 		}
 		WeekData.setDirectoryFromWeek();
 
 		scoreText = new FlxText(FlxG.width * 0.7, 5, 0, "", 32);
-		scoreText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
+		scoreText.setFormat(Paths.font("vc.ttf"), 32, FlxColor.WHITE, RIGHT);
 
 		scoreBG = new FlxSprite(scoreText.x - 6, 0).makeGraphic(1, 66, 0xFF000000);
 		scoreBG.alpha = 0.6;
@@ -218,7 +218,7 @@ class FreeplayState extends MusicBeatState
 		var size:Int = 18;
 		#end
 		var text:FlxText = new FlxText(textBG.x, textBG.y + 4, FlxG.width, leText, size);
-		text.setFormat(Paths.font("vcr.ttf"), size, FlxColor.WHITE, RIGHT);
+		text.setFormat(Paths.font("vc.ttf"), size, FlxColor.WHITE, RIGHT);
 		text.scrollFactor.set();
 		add(text);
 

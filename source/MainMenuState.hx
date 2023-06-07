@@ -89,7 +89,7 @@ class MainMenuState extends MusicBeatState
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 
-		var bg2:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('all/images/back'));
+		var bg2:FlxSprite = new FlxSprite(-30,0).loadGraphic(Paths.image('all/images/back'));
 		bg2.scrollFactor.set(0, yScroll);
 		bg2.setGraphicSize(Std.int(bg.width * 1.175));
 		bg2.frames = Paths.getSparrowAtlas('all/images/back');
@@ -97,7 +97,7 @@ class MainMenuState extends MusicBeatState
 		bg2.animation.play('menuidle');
 		bg2.active = true;
 		bg2.updateHitbox();
-		bg2.screenCenter();
+        bg2.screenCenter(y);
 		bg2.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg2);
 
@@ -150,24 +150,24 @@ class MainMenuState extends MusicBeatState
             switch(i)
 			    {
                     case 0:
-					    menuItem.y = 0;
+					    menuItem.y = 100;
 					    menuItem.x = 450;
 
                     
                     case 1:
-						menuItem.y = 150;
+						menuItem.y = 250;
 						menuItem.x = 450;
 
 					case 2:
-						menuItem.y = 300;
+						menuItem.y = 400;
 						menuItem.x = 450;
 						
 					case 3:
-						menuItem.y = 450;
+						menuItem.y = 550;
 						menuItem.x = 450;
 					
 					case 4:
-						menuItem.y = 600;
+						menuItem.y = 700;
 						menuItem.x = 450;	
 				}
 
