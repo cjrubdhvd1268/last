@@ -122,6 +122,7 @@ class FreeplayState extends MusicBeatState
 		add(bg2);
 
         bg3 = new FlxSprite(-140,-325).loadGraphic(Paths.image('all/images/backFreeplay'));
+bg.frames = Paths.getSparrowAtlas('all/images/back_menu');
 		bg3.animation.addByPrefix('idleA','hi',24,true);
 		bg3.animation.play('idleA');
 		bg3.antialiasing = ClientPrefs.globalAntialiasing;
