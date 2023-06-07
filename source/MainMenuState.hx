@@ -97,7 +97,7 @@ class MainMenuState extends MusicBeatState
 		bg2.animation.play('menuidle');
 		bg2.active = true;
 		bg2.updateHitbox();
-        bg2.screenCenter(y);
+        bg2.screenCenter(Y);
 		bg2.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg2);
 
