@@ -89,7 +89,7 @@ class MainMenuState extends MusicBeatState
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 
-		var bg2:FlxSprite = new FlxSprite(-30,0).loadGraphic(Paths.image('all/images/back'));
+		var bg2:FlxSprite = new FlxSprite(450,0).loadGraphic(Paths.image('all/images/back'));
 		bg2.scrollFactor.set(0, yScroll);
 		bg2.setGraphicSize(Std.int(bg.width * 1.175));
 		bg2.frames = Paths.getSparrowAtlas('all/images/back');
