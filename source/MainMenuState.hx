@@ -90,7 +90,7 @@ class MainMenuState extends MusicBeatState
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 
-		var bg2:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image('all/images/back'));
+		var bg2:FlxSprite = new FlxSprite(400,0).loadGraphic(Paths.image('all/images/back'));
 		bg2.setGraphicSize(Std.int(bg.width * 1.175));
 		bg2.frames = Paths.getSparrowAtlas('all/images/back','backmenu');
 		bg2.animation.addByPrefix('menuidle','hi',24,true);
