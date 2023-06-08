@@ -251,6 +251,12 @@ class PlayState extends MusicBeatState
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
 	var fastCar:BGSprite;
 
+	var sky:BGSprite;
+	var corruptionBack:BGSprite;
+	var corruptFront:BGSprite;
+	var buildings:BGSprite;
+	var light:FlxSprite;
+
 	var upperBoppers:BGSprite;
 	var bottomBoppers:BGSprite;
 	var santa:BGSprite;
@@ -455,6 +461,8 @@ class PlayState extends MusicBeatState
 					curStage = 'schoolEvil';
 				case 'ugh' | 'guns' | 'stress':
 					curStage = 'tank';
+				case 'vanquished':
+					curStage = 'corrupt';	
 				default:
 					curStage = 'stage';
 			}
@@ -832,6 +840,40 @@ class PlayState extends MusicBeatState
 				if(!ClientPrefs.lowQuality) foregroundSprites.add(new BGSprite('tank4', 1300, 900, 1.5, 1.5, ['fg']));
 				foregroundSprites.add(new BGSprite('tank5', 1620, 700, 1.5, 1.5, ['fg']));
 				if(!ClientPrefs.lowQuality) foregroundSprites.add(new BGSprite('tank3', 1300, 1200, 3.5, 2.5, ['fg']));
+
+                case 'corrupt':
+					var sky:BGSprite = new BGSprite('corruption/sky', -1100, -260, 0.9, 0.9);
+					sky.scale.x = 1.8;
+					sky.scale.y = 1.8;
+					sky.updateHitbox();
+					add(sky);	
+
+					var buildings:BGSprite = new BGSprite('bfrs/images/Buildings', -1100, -300, 1, 1);
+					buildings.scale.x = 1.8;
+					buildings.scale.y = 1.8;
+					buildings.updateHitbox();
+					add(buildings);
+
+					var light:FlxSprite = new FlxSprite(-890,-630).loadGraphic(Paths.image('bfrs/images/lights'));
+				light.frames = Paths.getSparrowAtlas('bfrs/images/lights');
+				light.animation.addByPrefix('mylight','c',9,true);
+				light.animation.play('mylight');
+				light.scrollFactor.set(0.85, 0.85);
+				light.scale.set(1.8,1.8);
+				add(light);
+				light.antialiasing = true;
+
+				var corruptBack:BGSprite = new BGSprite('corruption/images/corruptBack', -700, -370, 1, 1);
+					corruptBack.scale.x = 1.8;
+					corruptBaxk.scale.y = 1.8;
+					corruptBack.updateHitbox();
+					add(sky);	
+
+
+
+
+
+
 		}
 
 		switch(Paths.formatToSongPath(SONG.song))
