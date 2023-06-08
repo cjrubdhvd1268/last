@@ -79,12 +79,11 @@ class MainMenuState extends MusicBeatState
 
 		var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
 		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('all/images/back_menu'));
-  bg.frames = Paths.getSparrowAtlas('all/back_menu', 'backmenu');
+                bg.frames = Paths.getSparrowAtlas('all/images/back_menu', 'backmenu');
 		bg.scrollFactor.set(0, yScroll);
 		bg.setGraphicSize(Std.int(bg.width * 1.175));
 		bg.animation.addByPrefix('picoidle','hi',24,true);
 		bg.animation.play('picoidle');
-		bg.active = true;
 		bg.updateHitbox();
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
@@ -96,7 +95,6 @@ class MainMenuState extends MusicBeatState
 		bg2.frames = Paths.getSparrowAtlas('all/images/back','backmenu');
 		bg2.animation.addByPrefix('menuidle','hi',24,true);
 		bg2.animation.play('menuidle');
-		bg2.active = true;
 		bg2.updateHitbox();
         bg2.screenCenter(Y);
 		bg2.antialiasing = ClientPrefs.globalAntialiasing;
