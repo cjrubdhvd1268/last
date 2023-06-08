@@ -842,37 +842,9 @@ class PlayState extends MusicBeatState
 				if(!ClientPrefs.lowQuality) foregroundSprites.add(new BGSprite('tank3', 1300, 1200, 3.5, 2.5, ['fg']));
 
                 case 'corrupt':
-					var sky:BGSprite = new BGSprite('corruption/images/sky', -1100, -260, 0.9, 0.9);
-					sky.scale.x = 1.8;
-					sky.scale.y = 1.8;
-					sky.updateHitbox();
-					add(sky);	
+					  
 
-					var buildings:BGSprite = new BGSprite('bfrs/images/Buildings', -1100, -300, 1, 1);
-					buildings.scale.x = 1.8;
-					buildings.scale.y = 1.8;
-					buildings.updateHitbox();
-					add(buildings);
-
-					var light:FlxSprite = new FlxSprite(-890,-630).loadGraphic(Paths.image('bfrs/images/lights'));
-				light.frames = Paths.getSparrowAtlas('bfrs/images/lights');
-				light.animation.addByPrefix('mylight','c',9,true);
-				light.animation.play('mylight');
-				light.scale.set(1.8,1.8);
-				add(light);
-				light.antialiasing = true;
-
-				var corruptBack:BGSprite = new BGSprite('corruption/images/CorruptBack', -700, -370, 1, 1);
-					corruptBack.scale.x = 1.7;
-					corruptBack.scale.y = 1.7;
-					corruptBack.updateHitbox();
-					add(corruptBack);	
-
-				var corruptFront:BGSprite = new BGSprite('corruption/images/CorruptBack', -1150, -280, 1, 1);
-				corruptFront.scale.x = 1.7;
-				corruptFront.scale.y = 1.7;
-				corruptFront.updateHitbox();
-				add(corruptFront);	
+					
 
 
 
