@@ -865,7 +865,7 @@ class PlayState extends MusicBeatState
 
 				var corruptBack:BGSprite = new BGSprite('corruption/images/corruptBack', -700, -370, 1, 1);
 					corruptBack.scale.x = 1.8;
-					corruptBaxk.scale.y = 1.8;
+					corruptBack.scale.y = 1.8;
 					corruptBack.updateHitbox();
 					add(corruptBack);	
 
