@@ -867,7 +867,7 @@ class PlayState extends MusicBeatState
 					corruptBack.scale.x = 1.8;
 					corruptBaxk.scale.y = 1.8;
 					corruptBack.updateHitbox();
-					add(sky);	
+					add(corruptBack);	
 
 
 
