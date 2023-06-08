@@ -84,7 +84,7 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
 	public static var ratingStuff:Array<Dynamic> = [
-		['You Suck!', 0.2], //From 0% to 19%
+		['Sb!', 0.2], //From 0% to 19%
 		['Shit', 0.4], //From 20% to 39%
 		['Bad', 0.5], //From 40% to 49%
 		['Bruh', 0.6], //From 50% to 59%
@@ -93,7 +93,7 @@ class PlayState extends MusicBeatState
 		['Good', 0.8], //From 70% to 79%
 		['Great', 0.9], //From 80% to 89%
 		['Sick!', 1], //From 90% to 99%
-		['Perfect!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['God!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 
 	//event variables
@@ -842,7 +842,7 @@ class PlayState extends MusicBeatState
 				if(!ClientPrefs.lowQuality) foregroundSprites.add(new BGSprite('tank3', 1300, 1200, 3.5, 2.5, ['fg']));
 
                 case 'corrupt':
-					var sky:BGSprite = new BGSprite('corruption/sky', -1100, -260, 0.9, 0.9);
+					var sky:BGSprite = new BGSprite('corruption/images/sky', -1100, -260, 0.9, 0.9);
 					sky.scale.x = 1.8;
 					sky.scale.y = 1.8;
 					sky.updateHitbox();
@@ -858,17 +858,21 @@ class PlayState extends MusicBeatState
 				light.frames = Paths.getSparrowAtlas('bfrs/images/lights');
 				light.animation.addByPrefix('mylight','c',9,true);
 				light.animation.play('mylight');
-				light.scrollFactor.set(0.85, 0.85);
 				light.scale.set(1.8,1.8);
 				add(light);
 				light.antialiasing = true;
 
-				var corruptBack:BGSprite = new BGSprite('corruption/images/corruptBack', -700, -370, 1, 1);
-					corruptBack.scale.x = 1.8;
-					corruptBack.scale.y = 1.8;
+				var corruptBack:BGSprite = new BGSprite('corruption/images/CorruptBack', -700, -370, 1, 1);
+					corruptBack.scale.x = 1.7;
+					corruptBack.scale.y = 1.7;
 					corruptBack.updateHitbox();
 					add(corruptBack);	
 
+				var corruptFront:BGSprite = new BGSprite('corruption/images/CorruptBack', -1150, -280, 1, 1);
+				corruptFront.scale.x = 1.7;
+				corruptFront.scale.y = 1.7;
+				corruptFront.updateHitbox();
+				add(corruptFront);	
 
 
 
@@ -958,6 +962,8 @@ class PlayState extends MusicBeatState
 					gfVersion = 'gf-pixel';
 				case 'tank':
 					gfVersion = 'gf-tankmen';
+				case 'corrupt':
+					gfVersion = 'nogf';	
 				default:
 					gfVersion = 'gf';
 			}
@@ -1059,7 +1065,7 @@ class PlayState extends MusicBeatState
 
 		var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
 		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 248, 19, 400, "", 32);
-		timeTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		timeTxt.setFormat(Paths.font("vc.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		timeTxt.scrollFactor.set();
 		timeTxt.alpha = 0;
 		timeTxt.borderSize = 2;
@@ -1077,6 +1083,7 @@ class PlayState extends MusicBeatState
 		timeBarBG.y = timeTxt.y + (timeTxt.height / 4);
 		timeBarBG.scrollFactor.set();
 		timeBarBG.alpha = 0;
+		timeBarBG.flipX = true;
 		timeBarBG.visible = showTime;
 		timeBarBG.color = FlxColor.BLACK;
 		timeBarBG.xAdd = -4;
@@ -1212,14 +1219,14 @@ class PlayState extends MusicBeatState
 		reloadHealthBarColors();
 
 		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
-		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt.setFormat(Paths.font("vc.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
-		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
-		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "", 32);
+		botplayTxt.setFormat(Paths.font("vc.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
@@ -1373,6 +1380,8 @@ class PlayState extends MusicBeatState
 				startVideo('gunsCutscene');
 				case 'stress':
 				startVideo('stressCutscene');
+				case 'removal'
+				startVideo('Ads')
 
 				default:
 					startCountdown();
@@ -2228,7 +2237,7 @@ class PlayState extends MusicBeatState
 						FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
 					case 1:
 						countdownReady = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
-						countdownReady.cameras = [camHUD];
+						countdownReady.cameras = [camOther];
 						countdownReady.scrollFactor.set();
 						countdownReady.updateHitbox();
 
@@ -2249,7 +2258,7 @@ class PlayState extends MusicBeatState
 						FlxG.sound.play(Paths.sound('intro2' + introSoundsSuffix), 0.6);
 					case 2:
 						countdownSet = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
-						countdownSet.cameras = [camHUD];
+						countdownSet.cameras = [camOther];
 						countdownSet.scrollFactor.set();
 
 						if (PlayState.isPixelStage)
@@ -2269,7 +2278,7 @@ class PlayState extends MusicBeatState
 						FlxG.sound.play(Paths.sound('intro1' + introSoundsSuffix), 0.6);
 					case 3:
 						countdownGo = new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
-						countdownGo.cameras = [camHUD];
+						countdownGo.cameras = [camOther];
 						countdownGo.scrollFactor.set();
 
 						if (PlayState.isPixelStage)
