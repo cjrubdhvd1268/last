@@ -1380,8 +1380,8 @@ class PlayState extends MusicBeatState
 				startVideo('gunsCutscene');
 				case 'stress':
 				startVideo('stressCutscene');
-				case 'removal'
-				startVideo('Ads')
+				case 'removal':
+				startVideo('Ads');
 
 				default:
 					startCountdown();
