@@ -90,13 +90,13 @@ class MainMenuState extends MusicBeatState
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 
-		var bg2:FlxSprite = new FlxSprite(400,0).loadGraphic(Paths.image('all/images/back'));
+		var bg2:FlxSprite = new FlxSprite(100,0).loadGraphic(Paths.image('all/images/back'));
 		bg2.setGraphicSize(Std.int(bg.width * 1.175));
 		bg2.frames = Paths.getSparrowAtlas('all/images/back','backmenu');
 		bg2.animation.addByPrefix('menuidle','hi',24,true);
 		bg2.animation.play('menuidle');
 		bg2.updateHitbox();
-        bg2.screenCenter(Y);
+                bg2.screenCenter(Y);
 		bg2.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg2);
 
@@ -151,6 +151,7 @@ class MainMenuState extends MusicBeatState
                     case 0:
 					    menuItem.y = 100;
 					    menuItem.x = 450;
+					    menuItem.angel = 5;
 
                     
                     case 1:
