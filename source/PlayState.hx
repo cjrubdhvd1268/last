@@ -265,6 +265,12 @@ class PlayState extends MusicBeatState
 	var tankmanRun:FlxTypedGroup<TankmenBG>;
 	var foregroundSprites:FlxTypedGroup<BGSprite>;
 
+	var sky:BGSprite;
+	var Buildings:BGSprite;
+	var light:FlxSprite;
+	var CorruptFront:BGSprite;
+	var CorruptBack:BGSprite;
+
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
 	public var songMisses:Int = 0;
@@ -455,6 +461,8 @@ class PlayState extends MusicBeatState
 					curStage = 'schoolEvil';
 				case 'ugh' | 'guns' | 'stress':
 					curStage = 'tank';
+				case 'vanquished':
+					curStage = 'corrupt';	
 				default:
 					curStage = 'stage';
 			}
@@ -667,6 +675,23 @@ class PlayState extends MusicBeatState
 				santa = new BGSprite('christmas/santa', -840, 150, 1, 1, ['santa idle in fear']);
 				add(santa);
 				precacheList.set('Lights_Shut_off', 'sound');
+
+			case 'corrupt': //cbf vs cpico lol
+			    var sky:BGSprite = new BGSprite('corruption/sky',-1100,-260,0.9,0.9);
+				sky.scale.set(1.8,1.8);
+				add(sky);
+
+				var Buildings:BGSprite = new BGSprite('corruption/Buildings',-1100,-300,1,1);
+				Buildings.scale.set(1.8,1.8);
+				add(Buildings);
+
+				var CorruptBack:BGSprite = new BGSprite('corruption/CorruptBack',-700,-370,1,1)
+                CorruptBack.scale.set(1.7,1.7);
+				add(CorruptBack);
+
+				var CorruptFront:BGSprite = new BGSprite('corruption/CorruptFront',-1150,-280,1,1)
+                CorruptFront.scale.set(1.7,1.7);
+				add(CorruptFront);
 
 			case 'mallEvil': //Week 5 - Winter Horrorland
 				var bg:BGSprite = new BGSprite('christmas/evilBG', -400, -500, 0.2, 0.2);
